@@ -19,6 +19,8 @@ ENV HOME /home/bradleybossard
 
 WORKDIR /home/bradleybossard
 
-RUN curl https://sdk.cloud.google.com | bash
+ADD welcome.sh welcome.sh
+RUN cat welcome.sh >> .bashrc
+RUN rm welcome.sh
 
-# CMD "echo exec -l bash; echo gcloud init"
+RUN curl https://sdk.cloud.google.com | bash
