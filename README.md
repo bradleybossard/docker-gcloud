@@ -24,6 +24,15 @@ Next, ssh into the machine using the GCE CLI
 This generates the ssh keys.  Disconnect from the machine and your .ssh keys will be now
 be located in the ~/.ssh directory as google_compute_engine and google_compute_engine.pub
 
+    mkdir -p ~/test/gcloud/ssh
+    cd ~/test/gcloud
+    docker cp gcloud-bigman:/home/bradleybossard/.ssh/ $PWD/ssh/
+    cd ssh
+    mv google_compute_engine codename
+    mv google_compute_engine.pub codename.pub
+    zip --encrypt keys.zip codename*
+
+
 ## TODOs
 
 - [ ] Add script ala https://github.com/bradleybossard/docker-youtube-dl-gdrive to instruct user how to proceed, adding the Usage commands above
