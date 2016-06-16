@@ -15,4 +15,5 @@ function zipkeys {
  if [ -z $1 ]; then echo "Usage: zipkeys <newkeyname>"; return; fi;
  mv  google_compute_engine $1;
  mv google_compute_engine.pub $1.pub; 
+ zip -e $1.zip $1*
 }
