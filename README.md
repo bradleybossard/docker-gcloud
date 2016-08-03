@@ -4,7 +4,7 @@ so I can use them in a shell of my choice.
 
 ## Usage
 
-    docker run -it --rm bradleybossard/docker-gcloud -v $PWD:/src
+    docker run -it --rm -v $PWD:/src --name docker-gcloud bradleybossard/docker-gcloud
 
 Upon startup, instructions are shown to initialize the GCE cli tool.  These instructions can
 be view by typing
