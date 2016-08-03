@@ -10,3 +10,7 @@ Upon startup, instructions are shown to initialize the GCE cli tool.  These inst
 be view by typing
 
     instructions
+
+
+## TODOs
+* Update script such that zipkeys could run from any dir and copies to /src if it exists
